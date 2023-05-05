@@ -1,0 +1,47 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+* {
+  padding: 0;
+  margin:  0;
+  box-sizing: border-box;
+  font-family: 'Signika', sans-serif;
+
+}
+#anotacao {
+  color: white;
+}
+.container {
+  background-image: linear-gradient(to right ,rgb(0, 0, 0),rgb(143, 26, 238));
+  display: grid;
+ 
+  grid-template-areas: 
+  "nav nav "
+  "main main "
+  "footer footer "
+  ;
+height: 100vh;
+  grid-template-rows: 50px 1fr 100px;
+}
+
+nav {
+  grid-area: nav;
+
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  background-color: blueviolet;
+  grid-area: footer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btnadd {
+  text-align: center;
+ margin-left: 30px;
+}

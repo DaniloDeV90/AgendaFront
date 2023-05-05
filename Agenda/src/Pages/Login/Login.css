@@ -1,0 +1,154 @@
+.mainLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+color: aliceblue;
+}
+.formLogin {
+
+background: transparent;
+    padding: 20px;
+width: 300px;
+height: 300px;
+
+
+}
+
+
+#title {
+    
+    text-align: center;
+}
+
+
+form {
+margin-top: 25%;
+    display: flex;
+    align-items: center;
+ 
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+#btnLog {
+    padding: 0.8em 1.8em;
+    border: 2px solid #000000;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #ffffff;
+   }
+   
+   #btnLog::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #9011da;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   #btnLog:hover::before {
+    width: 105%;
+   }
+   
+   #btnLog:hover {
+    color: #111;
+   }
+   
+   .btn {
+    text-align: center;
+
+    margin-top: 15px;
+   }
+
+
+   .spinner {
+    width: 50px;
+    height: 50px;
+    position: relative;
+margin-left: 115px;
+   }
+   
+   .spinner .dot {
+    position: absolute;
+    inset: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+   }
+   
+   .spinner .dot::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(12, 180, 231);
+   }
+   
+   @-webkit-keyframes spin {
+    to {
+     -webkit-transform: rotate(360deg);
+             transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes spin {
+    to {
+     -webkit-transform: rotate(360deg);
+             transform: rotate(360deg);
+    }
+   }
+   
+   .spinner .dot {
+    -webkit-animation: spin 2s infinite;
+            animation: spin 2s infinite;
+   }
+   
+   .spinner .dot:nth-child(2) {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+   }
+   
+   .spinner .dot:nth-child(3) {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+   }
+   
+   .spinner .dot:nth-child(4) {
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+   }
+   
+   .spinner .dot:nth-child(5) {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+   }
+
+   #msgerro {
+color: rgb(255, 37, 37);
+margin-bottom: 10px;
+   }
+
+   
+   #msgsucess {
+    color: rgb(85, 255, 52);
+    margin-bottom: 10px;
+       }
