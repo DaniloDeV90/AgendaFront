@@ -2,7 +2,9 @@ import { useState } from "react"
 import API from "../../Functions/API"
 import campoEmBranco from "./tratamentoDerros/campoEmBranco"
 import { useHooks } from "../../Hooks/useContext,"
+import { useNavigate } from "react-router-dom"
 const BtnLogin =  ({email,senha}) => {
+  const navigate = useNavigate ()
     const {setValor} = useHooks () 
 const [True, setTrue] = useState (false)
 const [MsgTrue, setMsgTrue] = useState ("")
@@ -41,6 +43,7 @@ setMsgTrue ("Logado com sucesso!!")
 localStorage.setItem ("token", resultado.token)
  localStorage.setItem ("id", resultado.id)
 setValor (resultado.id)
+navigate ("/Auth")
     }
    
  
