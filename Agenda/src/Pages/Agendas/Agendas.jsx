@@ -35,8 +35,7 @@ VerAgendas ()
 const Delete = async  (idColuna) => {
   await API (`DeleteTable/${id}/${idColuna}`,"DELETE")
   
-  location.reload ()
-  navigate ("/Auth")
+
 }
 
 const Criarr = () => {
