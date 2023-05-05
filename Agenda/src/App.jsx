@@ -27,6 +27,7 @@ function App() {
    <Route path="/:token/Agendas" element={ <Agendas/>}> </Route>
    <Route path="/:token/Editar" element={ <Editar/>}> </Route>
    <Route path="/:token/Criar" element={ <Criar/>}> </Route>
+   
 <Route path="/Erro" element= {<Error/>}/>
 
     </Routes>

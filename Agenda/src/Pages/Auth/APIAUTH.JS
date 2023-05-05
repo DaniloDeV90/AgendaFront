@@ -1,5 +1,5 @@
 export  const verificar = async  (token,id) => {
-    const req =  await fetch (`http://localhost:3050/user/${id}`, {
+    const req =  await fetch (`https://agenda-psbu.onrender.com/user/${id}`, {
         headers: {"Authorization": "Bearer " + token}
     }).then (resolve => resolve.json ())
 
