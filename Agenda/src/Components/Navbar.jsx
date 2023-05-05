@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+
 import {NavLink} from "react-router-dom"
-import { useHooks } from '../Hooks/useContext,'
+
 import "./Navbar.css"
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {

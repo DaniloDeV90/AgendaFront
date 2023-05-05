@@ -5,7 +5,7 @@ import Login from "./Pages/Login/Login"
 import Cadastro from "./Pages/Cadastro/Cadastro"
 
 
-import Navbar from "./components/Navbar"
+import Navbar from "./Components/Navbar"
 import Auth from "./Pages/Auth/Auth"
 import Agendas from "./Pages/Agendas/Agendas"
 import Criar from "./Pages/CriarAgendas/Criar"
