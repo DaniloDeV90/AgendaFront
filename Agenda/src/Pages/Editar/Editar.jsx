@@ -29,7 +29,7 @@ const Editar = () => {
     <main>
   <form action="" onSubmit={editar}>
   <label htmlFor="" id='anotacao'>
-    Titulp: 
+    Titulo: 
     <input type="text" onChange={(e => setTitulo (e.target.value))} />
 </label>
 
