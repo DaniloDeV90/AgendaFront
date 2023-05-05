@@ -1,32 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import { verificar } from '../Auth/APIAUTH.JS'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import API from '../../Functions/API'
 import "./Agendas.css"
 import { useHooks } from '../../Hooks/useContext,'
 
 const Agendas = () => {
+ 
+const {token} = useParams ()
+
+
+
 const {setIDedit} = useHooks ()
 const navigate = useNavigate ()
-    const toki = localStorage.getItem ("token")
+   
    const id =  localStorage.getItem ("id")
 const [tabel, setTabel ]  = useState ()
 
-        const  btn = async   () => {
-            const req =  await verificar (toki)
-          
-           if (!req.msg) {
-
-             navigate ("/")
-           }
-        }
 
 useEffect (() => {
     const VerAgendas = async ()  => {
+   
+ const verify = await verificar (token,id)
+   if (!verify.msg) {
 
+    navigate ("/Erro")
+   }
+   
         const req =  await API (`searchUser/${id}`, "GET")
         setTabel (req)
-        console.log (req.agendas)
+       
     }
 VerAgendas ()
 },[])
@@ -36,25 +39,24 @@ const Delete = async  (idColuna) => {
   await API (`DeleteTable/${id}/${idColuna}`,"DELETE")
   
   location.reload ()
-  navigate ("/Auth")
+  navigate (`/${token}/Agendas`)
 }
 
 const Criarr = () => {
 
-navigate ("/Auth2")
+navigate (`/${token}/Criar`)
 }
 
 const Editar=  (id) => {
 setIDedit (id)
-navigate ("/Auth3")
+navigate (`/${token}/Editar`)
 }
   return (
     
 
 
     <main className='MainAgendas'>
-     
-   
+
    {tabel && <h1 id='titleAgenda'>Olá {tabel.Nome}</h1>}
     
   <button  id="btnAgendas" onClick={Criarr}>Criar</button>

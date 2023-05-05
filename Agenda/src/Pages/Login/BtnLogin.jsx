@@ -25,7 +25,7 @@ setMsgErro ("CAMPOS EM BRANCO,CORRIJA")
 return}
 
     const usuario = {Email:email,Senha:senha}
-
+ 
 
   setLoading (false)  
 const resultado = await API ("Login","POST", usuario)
@@ -43,7 +43,7 @@ setMsgTrue ("Logado com sucesso!!")
 localStorage.setItem ("token", resultado.token)
  localStorage.setItem ("id", resultado.id)
 setValor (resultado.id)
-navigate ("/Auth")
+navigate (`/${resultado.token}/Agendas`)
     }
    
  

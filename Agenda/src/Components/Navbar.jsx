@@ -8,7 +8,7 @@ const Navbar = () => {
 
 
 const po = localStorage.getItem ("id")
-
+const token  = localStorage.getItem ("token")
   
 
 const logout = () => {
@@ -37,7 +37,7 @@ return (
     </div>}
     {po && <div className="links"> 
   <NavLink to={"/"}>Home</NavLink>
-    <NavLink to={"/Auth"} >Agendas</NavLink>
+    <NavLink to={"/" + token + "/Agendas"} >Agendas</NavLink>
     <button onClick={logout} id='botudo'> Logout</button>
     </div>}
     

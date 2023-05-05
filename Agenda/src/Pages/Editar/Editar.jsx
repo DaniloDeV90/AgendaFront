@@ -1,15 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHooks } from '../../Hooks/useContext,'
 import API from '../../Functions/API'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { verificar } from '../Auth/APIAUTH.JS'
 
 const Editar = () => {
+
+  
     const navigate = useNavigate ()
     const id = localStorage.getItem ("id")
+    const {token} = useParams ()
     const [Conteudo,setConteudo] = useState ()
     const [Titulo,setTitulo] = useState ()
     const {idEdit} = useHooks ()
-
+    useEffect (() => {
+      const VerAgendas = async ()  => {
+     
+   const verify = await verificar (token,id)
+     if (!verify.msg) {
+  
+      navigate ("/Erro")
+}
+    
+      }
+  VerAgendas ()
+  },[])
+  
 
     const editar  = async  (e) => {
         e.preventDefault ()
@@ -21,7 +37,7 @@ const Editar = () => {
         }
        await API (`editTable/${id}`,"PUT", date)
        
-       navigate ("/Auth")
+       navigate (`/${token}/Agendas`)
 
     }
   return (

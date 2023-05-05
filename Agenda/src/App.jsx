@@ -3,14 +3,13 @@ import './App.css'
 import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
 import Cadastro from "./Pages/Cadastro/Cadastro"
-
+import Error from "./Pages/Error/Error"
 
 import Navbar from "./Components/Navbar"
-import Auth from "./Pages/Auth/Auth"
+
 import Agendas from "./Pages/Agendas/Agendas"
 import Criar from "./Pages/CriarAgendas/Criar"
-import Auth2 from "./Pages/Auth/Auth2"
-import Auth3 from "./Pages/Auth/Auth3"
+
 import Editar from "./Pages/Editar/Editar"
 function App() {
 
@@ -25,10 +24,10 @@ function App() {
       <Route path="/Login" element={<Login/>}></Route>
       <Route path="/cadastro" element={<Cadastro/>}></Route>
    
-    <Route path="/Auth" element={ <Auth> <Agendas/> </Auth>} />
-    <Route path="/Auth2" element={ <Auth2>  <Criar/> </Auth2>} />
-    <Route path="/Auth3" element={ <Auth3>  <Editar/> </Auth3>} />
-
+   <Route path="/:token/Agendas" element={ <Agendas/>}> </Route>
+   <Route path="/:token/Editar" element={ <Editar/>}> </Route>
+   <Route path="/:token/Criar" element={ <Criar/>}> </Route>
+<Route path="/Erro" element= {<Error/>}/>
 
     </Routes>
 <footer>Agenda react </footer>
