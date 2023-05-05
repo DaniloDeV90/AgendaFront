@@ -56,7 +56,7 @@ navigate (`/${token}/Editar`)
 
 
     <main className='MainAgendas'>
-{console.log (tabel)}
+
    {tabel && <h1 id='titleAgenda'>Olá {tabel.Nome}</h1>}
     
   <button  id="btnAgendas" onClick={Criarr}>Criar</button>
