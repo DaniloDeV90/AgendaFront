@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
 import Cadastro from "./Pages/Cadastro/Cadastro"
 
-import Error from "./Pages/Error/Error"
+
 import Navbar from "./components/Navbar"
 import Auth from "./Pages/Auth/Auth"
 import Agendas from "./Pages/Agendas/Agendas"
