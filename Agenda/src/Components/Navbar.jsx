@@ -13,7 +13,7 @@ const po = localStorage.getItem ("id")
 
 const logout = () => {
   localStorage.clear ()
-  navigate ("/Login")
+  navigate ("/login")
 
 
 }
