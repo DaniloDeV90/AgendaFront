@@ -28,7 +28,7 @@ function App() {
    <Route path="/:token/Editar" element={ <Editar/>}> </Route>
    <Route path="/:token/Criar" element={ <Criar/>}> </Route>
    
-<Route path="/Erro" element= {<Error/>}/>
+<Route path="/Error" element= {<Error/>}/>
 
     </Routes>
 <footer>Agenda react </footer>
