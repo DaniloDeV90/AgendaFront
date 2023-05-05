@@ -5,7 +5,7 @@ const Auth = ({children}) => {
 
 const id = localStorage.getItem ("id")
 
-return  id ? children :  <Navigate to="/Login"/>
+return  id ? children :  <Navigate to="/login"/>
 
 }
 
