@@ -3,7 +3,7 @@ import './App.css'
 import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
 import Cadastro from "./Pages/Cadastro/Cadastro"
-import Error from "./Pages/Error/Error"
+import Error from "./Error"
 
 import Navbar from "./Components/Navbar"
 
